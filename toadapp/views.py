@@ -9,9 +9,12 @@ def index(request):
     return render_to_response("toadapp/index.html", {})
 
 def create_character(request):
+    print('in create_character')
     if request.method == 'POST':
         form = CharacterForm(request.POST)
+        print('form submitted')
         if form.is_valid():
+            print('Form is valid')
             return HttpResponseRedirect('/thanks/')
     else:
         form = CharacterForm()

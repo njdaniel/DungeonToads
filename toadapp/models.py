@@ -15,7 +15,7 @@ class CharacterAttributes(models.Model):
         ('T', 'Toad')
 
     )
-
+    # --- Attributes of Character -----
     name = models.CharField(max_length=200)
     points = models.CharField(max_length=200)
     strength = models.CharField(max_length=200)
@@ -25,3 +25,6 @@ class CharacterAttributes(models.Model):
     health = models.CharField(max_length=200)
     gender = models.CharField(max_length=1, choices=GENDERS)
     race = models.CharField(max_length=1, choices=RACES)
+
+    def __str__(self):
+        self.name
