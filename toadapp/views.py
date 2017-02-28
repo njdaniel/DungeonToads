@@ -13,6 +13,6 @@ def create_character(request):
         form = CharacterForm(request.POST)
         if form.is_valid():
             return HttpResponseRedirect('/thanks/')
-        else:
-            form = CharacterForm()
-    return render(request, "toadapp/create_character.html", {'form':form})
+    else:
+        form = CharacterForm()
+    return render_to_response("toadapp/create_character.html", {'form':form})
