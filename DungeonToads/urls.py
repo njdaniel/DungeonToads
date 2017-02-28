@@ -20,5 +20,6 @@ from toadapp import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^create_character/$', views.create_character, name='create_character'),
     url(r'^admin/', admin.site.urls),
 ]
