@@ -3,5 +3,11 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-class CharacterForm(forms.Form):
-    name = forms.CharField(label='name', max_length=20)
+from .models import CharacterAttributes
+
+class CharacterForm(forms.ModelForm):
+
+    class Meta:
+        model = CharacterAttributes
+        fields = ('name',)
+
