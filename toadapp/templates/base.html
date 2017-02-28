@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DungeonToads</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{% static 'toadapp/main.css' %}">
+    </head>
+    <body>
+    	{% block content %}
+    	{% endblock content %}
+    	<script src="{% static 'toadapp/main.js' %}"></script>
+    </body>
+</html>
