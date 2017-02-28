@@ -8,6 +8,14 @@ class CharacterAttributes(models.Model):
         ('F', 'Female'),
     )
 
+    RACES = (
+        ('H','Human'),
+        ('D', 'Dwarf'),
+        ('E', 'Elf'),
+        ('T', 'Toad')
+
+    )
+
     name = models.CharField(max_length=200)
     points = models.CharField(max_length=200)
     strength = models.CharField(max_length=200)
@@ -16,3 +24,4 @@ class CharacterAttributes(models.Model):
     intelligence = models.CharField(max_length=200)
     health = models.CharField(max_length=200)
     gender = models.CharField(max_length=1, choices=GENDERS)
+    race = models.CharField(max_length=1, choices=RACES)

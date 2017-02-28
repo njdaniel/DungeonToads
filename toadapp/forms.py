@@ -9,5 +9,5 @@ class CharacterForm(forms.ModelForm):
 
     class Meta:
         model = CharacterAttributes
-        fields = ('name', 'gender')
+        fields = ('name', 'gender', 'race')
 
