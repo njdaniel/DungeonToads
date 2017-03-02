@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content%}
+    {% if characters %}
+        {% for character in characters %}
+            {{ character.name }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

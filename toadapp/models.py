@@ -17,14 +17,14 @@ class CharacterAttributes(models.Model):
     )
     # --- Attributes of Character -----
     name = models.CharField(max_length=200)
-    points = models.CharField(max_length=200)
-    strength = models.CharField(max_length=200)
-    dexterity = models.CharField(max_length=200)
-    constitution = models.CharField(max_length=200)
-    intelligence = models.CharField(max_length=200)
-    health = models.CharField(max_length=200)
-    gender = models.CharField(max_length=1, choices=GENDERS)
-    race = models.CharField(max_length=1, choices=RACES)
+    points = models.CharField(max_length=20, default='20')
+    strength = models.CharField(max_length=20, default='8')
+    dexterity = models.CharField(max_length=20, default='8')
+    constitution = models.CharField(max_length=20, default='8')
+    intelligence = models.CharField(max_length=20, default='8')
+    health = models.CharField(max_length=20, default='40')
+    gender = models.CharField(max_length=1, choices=GENDERS, default='Male')
+    race = models.CharField(max_length=1, choices=RACES, default='Toad')
 
     def __str__(self):
         self.name

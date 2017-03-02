@@ -18,6 +18,7 @@ def create_character(request):
         print('form submitted')
         if form.is_valid():
             print('Form is valid')
+            form.save()
             return redirect('character_detail')
     else:
         form = CharacterForm()
@@ -25,3 +26,7 @@ def create_character(request):
 
 def character_detail(request):
     return render(request, "toadapp/character_detail.html", {})
+
+def character_list(request):
+    characters = CharacterAttributes.objects.all()
+    return render_to_response("toadapp/character_list.html", {'characters':characters})
