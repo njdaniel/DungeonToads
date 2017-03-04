@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^create_character/$', views.create_character, name='create_character'),
     url(r'^character_list/$', views.character_list, name='character_list'),
     url(r'^admin/', admin.site.urls),
-    url(r'^character_detail/$', views.character_detail, name='character_detail')
+    url(r'^character_detail/(?P<id>\d+)/', views.character_detail, name='character_detail')
 ]

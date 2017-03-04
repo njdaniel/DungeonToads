@@ -11,6 +11,6 @@ class CharacterForm(forms.ModelForm):
         model = CharacterAttributes
         fields = ('name', 'gender', 'race', 'strength',
                   'dexterity', 'intelligence', 'constitution',
-                  'health', 'points')
+                  'health', 'points', 'armour_class',)
 
 

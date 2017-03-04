@@ -3,7 +3,7 @@
 {% block content%}
     {% if characters %}
         {% for character in characters %}
-            {{ character.name }}
+            <p><a href="../character_detail/{{ character.id }}">{{ character.name }}</a></p>
         {% endfor %}
     {% endif %}
 {% endblock %}

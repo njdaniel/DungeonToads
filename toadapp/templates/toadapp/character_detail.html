@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Thanks for submitting</p>
+    <h3>Character Detail</h3>
+    {% if id %}
+        <p>
+            <b>{{ character.name }}</b>
+        </p>
+        <p>Gender: {{ character.gender }}</p>
+        <p>Race: {{ character.race }}</p>
+        <p>Strength: {{ character.strength }}</p>
+        <p>Dexerity: {{ character.dexterity }}</p>
+        <p>Constitution: {{ character.constitution }}</p>
+        <p>Intelligence: {{ character.intelligence }}</p>
+    {% endif %}
 {% endblock %}
