@@ -1,5 +1,10 @@
 from django.db import models
 
+
+class Attacks(models.Model):
+    name = models.CharField(max_length=200)
+    damage = models.CharField(max_length=20)
+
 # Create your models here.
 class CharacterAttributes(models.Model):
 
@@ -26,6 +31,7 @@ class CharacterAttributes(models.Model):
     gender = models.CharField(max_length=1, choices=GENDERS, default='Male')
     race = models.CharField(max_length=1, choices=RACES, default='Toad')
     armour_class = models.IntegerField(default=10)
+    attacks = models.ManyToManyField(Attacks)
 
     def __str__(self):
         self.name
@@ -39,5 +45,6 @@ class Monsters(models.Model):
     dexterity = models.CharField(max_length=20, default='8')
     constitution = models.CharField(max_length=20, default='8')
     intelligence = models.CharField(max_length=20, default='8')
-    actions = models.CharField(max_length=200)
+    attacks = models.ManyToManyField(Attacks)
     armour_class = models.IntegerField(default=10)
+
