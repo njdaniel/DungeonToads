@@ -3,11 +3,13 @@
 {% block content %}
     <p>In combat.html</p>
     <div>
-        <p>{{ player.name }}</p>
-        <p>{{ player.health }}</p>
+        <p>Player: {{ player.name }}</p>
+        <p>AC: {{ player.armour_class }}</p>
+        <p>Health: {{ player.health }}</p>
     </div>
     <div>
-        <p>{{ baddie.type }}</p>
-        <p>{{ baddie.health }}</p>
+        <p>Opponent: {{ baddie.type }}</p>
+        <p>AC: {{ baddie.armour_class }}</p>
+        <p>Health: {{ baddie.health }}</p>
     </div>
 {% endblock %}
