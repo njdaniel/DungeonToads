@@ -18,6 +18,7 @@ def create_character(request):
         print('inside post')
         form = CharacterForm(request.POST)
         print('form submitted')
+        print(request.POST)
         if form.is_valid():
             print('Form is valid')
             form.save()
