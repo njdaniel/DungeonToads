@@ -38,3 +38,13 @@ def fight(request, id):
     character = CharacterAttributes.objects.get(id=id)
     monsters = Monsters.objects.all()
     return render(request, "toadapp/fight.html", {"character":character, "monsters": monsters})
+
+def combat(request):
+    player = request.GET.get('player')
+    print(player)
+    baddie = request.GET.get('baddie')
+    print(baddie)
+
+    player_model = CharacterAttributes.objects.get(name=player)
+    baddie_model = Monsters.objects.get(type=baddie)
+    return render(request, "toadapp/combat.html", {"player": player_model, "baddie":baddie_model})

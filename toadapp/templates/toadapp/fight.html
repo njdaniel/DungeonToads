@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Current Character{{ character.name }}</p>
+    <p>Current Character: {{ character.name }}</p>
     <p></p>
     <p></p>
     {% for monster in monsters %}
-        {{ monster.type }}
+        <p><a href="{% url "combat" %}?player={{ character.name }}&baddie={{ monster.type }} ">{{ monster.type }}</a></p>
     {% endfor %}
 {% endblock %}
