@@ -13,4 +13,5 @@
         <p>Constitution: {{ character.constitution }}</p>
         <p>Intelligence: {{ character.intelligence }}</p>
     {% endif %}
+    <a href="{% url "fight" character.id %}">Go Fight!</a>
 {% endblock %}

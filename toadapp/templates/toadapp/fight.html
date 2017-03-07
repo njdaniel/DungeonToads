@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Current Character{{ character.name }}</p>
+    <p></p>
+    <p></p>
+    {% for monster in monsters %}
+        {{ monster.type }}
+    {% endfor %}
+{% endblock %}

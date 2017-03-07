@@ -20,6 +20,7 @@ from toadapp import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^fight/(?P<id>\d+)', views.fight, name='fight'),
     url(r'^create_character/$', views.create_character, name='create_character'),
     url(r'^character_list/$', views.character_list, name='character_list'),
     url(r'^admin/', admin.site.urls),

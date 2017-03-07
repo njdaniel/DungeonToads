@@ -40,11 +40,11 @@ class CharacterAttributes(models.Model):
 class Monsters(models.Model):
 
     type = models.CharField(max_length=200)
-    health = models.CharField(max_length=20, default='20')
-    strength = models.CharField(max_length=20, default='8')
-    dexterity = models.CharField(max_length=20, default='8')
-    constitution = models.CharField(max_length=20, default='8')
-    intelligence = models.CharField(max_length=20, default='8')
+    health = models.IntegerField(default=20)
+    strength = models.IntegerField(default=8)
+    dexterity = models.IntegerField(default=8)
+    constitution = models.IntegerField(default=8)
+    intelligence = models.IntegerField(default=8)
     attacks = models.ManyToManyField(Attacks)
     armour_class = models.IntegerField(default=10)
 

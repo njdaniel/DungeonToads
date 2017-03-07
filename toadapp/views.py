@@ -6,6 +6,7 @@ from toadapp.models import CharacterAttributes
 from toadapp.character import Character
 from .forms import CharacterForm
 from .models import CharacterAttributes
+from .models import Monsters
 
 def index(request):
     return render_to_response("toadapp/index.html", {})
@@ -32,3 +33,8 @@ def character_detail(request, id):
 def character_list(request):
     characters = CharacterAttributes.objects.all()
     return render_to_response("toadapp/character_list.html", {'characters':characters})
+
+def fight(request, id):
+    character = CharacterAttributes.objects.get(id=id)
+    monsters = Monsters.objects.all()
+    return render(request, "toadapp/fight.html", {"character":character, "monsters": monsters})
